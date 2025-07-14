@@ -1,11 +1,11 @@
 #include <iostream>
-
 #include "modules/binary_to_decimal.h"
 #include "modules/decimal_to_binary.h"
 #include "modules/ncr.h"
 #include "modules/sod.h"
 #include "modules/prime.h"
 #include "modules/fib.h"
+#include "modules/max_min_in_array.h"
 #include "modules/power_of_two.h"
 #include "modules/reverse_integer.h"
 
@@ -148,6 +148,21 @@ void handle_power_of_two()
         cout << number << " is not a power of 2." << endl;
     }
 }
+
+void handle_max_min_in_array()
+{
+    cout << "Enter the size of the array: ";
+    int size;
+    cin >> size;
+    int arr[size];
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter element " << i << ": ";
+        cin >> arr[i];
+    }
+    max_min_in_array(arr, size);
+}
+
 int main()
 {
     cout << "Welcome to the DSA series!" << endl;
@@ -162,6 +177,7 @@ int main()
     cout << "8. Binary Operations" << endl;
     cout << "9. Reverse Integer" << endl;
     cout << "10. Find if number is power of 2" << endl;
+    cout << "11. Max and Min in Array" << endl;
 
     int task;
     cin >> task;
@@ -196,6 +212,9 @@ int main()
         break;
     case 10:
         handle_power_of_two();
+        break;
+    case 11:
+        handle_max_min_in_array();
         break;
     default:
         cout << "Invalid task" << endl;
