@@ -1,11 +1,13 @@
 #include <iostream>
 
-#include "binary_to_decimal.h"
-#include "decimal_to_binary.h"
-#include "ncr.h"
-#include "sod.h"
-#include "prime.h"
-#include "fib.h"
+#include "modules/binary_to_decimal.h"
+#include "modules/decimal_to_binary.h"
+#include "modules/ncr.h"
+#include "modules/sod.h"
+#include "modules/prime.h"
+#include "modules/fib.h"
+#include "modules/power_of_two.h"
+#include "modules/reverse_integer.h"
 
 using namespace std;
 
@@ -93,6 +95,59 @@ void handle_binary_to_decimal()
     cout << "Decimal representation: " << decimal << endl;
 }
 
+void handle_bitwise_operations()
+{
+    int a, b;
+    cout << "Enter two numbers for bitwise operations: ";
+    cin >> a >> b;
+
+    // Bitwise operations first convert the numbers to binary and then perform operations on the bits
+    // AND checks if both bits are 1
+    cout << "Bitwise AND: " << (a & b) << endl;
+    // OR checks if at least one bit is 1
+    cout << "Bitwise OR: " << (a | b) << endl;
+    // XOR checks if the bits are different
+    cout << "Bitwise XOR: " << (a ^ b) << endl;
+    // NOT inverts the bits
+    cout << "Bitwise NOT of a: " << (~a) << endl;
+    cout << "Bitwise NOT of b: " << (~b) << endl;
+    // Left shift moves bits to the left, effectively multiplying by 2 | a*2^b
+    cout << "Left Shift of a: " << (a << 1) << endl;
+    // Right shift moves bits to the right, effectively dividing by 2 | a/ 2^b
+    cout << "Right Shift of a: " << (a >> 1) << endl;
+}
+
+void handle_reverse_integer()
+{
+    int number;
+    cout << "Enter an integer to reverse: ";
+    cin >> number;
+
+    // Reverse the integer
+    int const reversed = reverse_integer(number);
+    if (reversed == 0)
+    {
+        cout << "Overflow occurred while reversing the integer." << endl;
+        return;
+    }
+    cout << "Reversed integer: " << reversed << endl;
+}
+
+void handle_power_of_two()
+{
+    int number;
+    cout << "Enter a number to check if it is a power of 2: ";
+    cin >> number;
+
+    if (power_of_two(number))
+    {
+        cout << number << " is a power of 2." << endl;
+    }
+    else
+    {
+        cout << number << " is not a power of 2." << endl;
+    }
+}
 int main()
 {
     cout << "Welcome to the DSA series!" << endl;
@@ -104,6 +159,9 @@ int main()
     cout << "5. Fibonacci" << endl;
     cout << "6. Decimal to Binary" << endl;
     cout << "7. Binary to Decimal" << endl;
+    cout << "8. Binary Operations" << endl;
+    cout << "9. Reverse Integer" << endl;
+    cout << "10. Find if number is power of 2" << endl;
 
     int task;
     cin >> task;
@@ -129,6 +187,15 @@ int main()
         break;
     case 7:
         handle_binary_to_decimal();
+        break;
+    case 8:
+        handle_bitwise_operations();
+        break;
+    case 9:
+        handle_reverse_integer();
+        break;
+    case 10:
+        handle_power_of_two();
         break;
     default:
         cout << "Invalid task" << endl;
