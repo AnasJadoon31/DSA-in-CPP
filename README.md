@@ -112,11 +112,7 @@ Use it, modify it, learn from it — no strings attached.
 
 ## ✍️ Author
 
-Muhammad Anas
-
-🚀 CS Student
-
-🧠 Aspiring AI Systems Engineer | C++ Practitioner
-
-📓 Day 04 of my "Build Deep First" Journey
+   Muhammad Anas
+   
+   🚀 CS Student | 🧠 Aspiring AI Systems Engineer | C++ Practitioner
 
