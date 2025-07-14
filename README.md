@@ -43,9 +43,13 @@ Each feature or function (e.g. prime check, digit sum, Fibonacci) is encapsulate
 ## 🚀 Features
 
 🔹 Clean modular codebase using header/source separation
+
 🔹 CMake-based cross-platform compilation
+
 🔹 Interactive menu-driven CLI application
+
 🔹 Beginner-friendly structure for learning DSA
+
 🔹 Designed for future extensions and scaling
 
 ---
