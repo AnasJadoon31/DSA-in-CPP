@@ -21,4 +21,6 @@ add_executable(embeddedEnvironment main.cpp
         modules/power_of_two.cpp
         modules/power_of_two.h
         modules/max_min_in_array.cpp
-        modules/max_min_in_array.h)
+        modules/max_min_in_array.h
+        handlers.h
+        handlers.cpp)
